@@ -5,120 +5,105 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  background: linear-gradient(135deg, #020617, #020617);
+  background: #0f172a;
   color: #e5e7eb;
-}
-
-body.light {
-  background: #f8fafc;
-  color: #0f172a;
+  line-height: 1.6;
 }
 
 .hero {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  padding: 4rem 1rem;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  background: linear-gradient(90deg, #60a5fa, #38bdf8);
-  -webkit-background-clip: text;
-  color: transparent;
+.hero img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
-.hero p {
-  margin: 1rem 0 2rem;
-  opacity: 0.85;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+.buttons {
+  margin-top: 1.5rem;
 }
 
 .btn {
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  background: #2563eb;
+  background: #3b82f6;
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px;
   color: white;
   text-decoration: none;
-  border: none;
-  cursor: pointer;
+  margin: 0 0.5rem;
 }
 
 .btn.outline {
   background: transparent;
-  border: 1px solid #2563eb;
+  border: 1px solid #3b82f6;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
+nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 1rem;
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  background: #020617;
+}
+
+nav a {
+  color: #93c5fd;
+  text-decoration: none;
 }
 
 .section {
-  padding: 4rem 10%;
+  padding: 4rem 1.5rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
-h2 {
-  margin-bottom: 1.5rem;
-  color: #60a5fa;
-}
-
-.grid {
+.grid, .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
-.card {
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.project-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card, .project-card {
+  background: rgba(255,255,255,0.05);
   padding: 1.5rem;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
 }
 
-.timeline-item {
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
-  border-left: 3px solid #2563eb;
+.card:hover, .project-card:hover {
+  transform: translateY(-6px);
 }
 
 footer {
   text-align: center;
   padding: 2rem;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
-/* animation */
+/* Reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: 0.8s ease;
 }
-
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+  transition: 0.8s;
 }
